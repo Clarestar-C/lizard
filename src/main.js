@@ -1,9 +1,12 @@
 import './style.css'
 
 // ---- files in public/ ----
-const GIF_SRC = '/lizard.gif'
-const LIZARD_AUDIO = '/lizard.mpeg'
-const SAM_AUDIO = '/mas.mpeg'
+// '/' on localhost, '/lizard/' on GitHub Pages — correct in both places
+const BASE = import.meta.env.BASE_URL
+const GIF_SRC = `${BASE}lizard.gif`
+const LIZARD_AUDIO = `${BASE}lizard.mpeg`
+const SAM_AUDIO = `${BASE}mas.mpeg`
+
 
 // how long the gif plays per press, in ms — lower = shorter burst
 const PLAY_MS = 400
