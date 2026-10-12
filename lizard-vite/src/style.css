@@ -1,0 +1,60 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  background: #c9f2c9;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+#app { text-align: center; padding: 2rem; }
+h1 { color: #1d5c34; margin-bottom: 1rem; }
+
+.tom {
+  width: 220px;
+  max-width: 60vw;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+/* green long rounded rectangle */
+#lizard-btn {
+  display: block;
+  width: min(420px, 80vw);
+  padding: 1.1rem;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-family: inherit;
+  color: #fff;
+  background: #2e9e5b;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #1d6b3d;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+#lizard-btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #1d6b3d; }
+
+/* secret pill, pinned bottom-left */
+#secret-btn {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: #1d5c34;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.85;
+}
+#secret-btn.on { background: #000; outline: 2px solid #666; }
+
+/* secret mode: dark screen */
+body.secret { background: #141414; }
+body.secret h1 { color: #e8e8e8; }
